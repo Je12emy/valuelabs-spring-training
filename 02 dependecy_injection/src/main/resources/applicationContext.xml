@@ -3,10 +3,5 @@
 http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"></bean>
     <!-- bean creation -->
-    <bean id="accdao" class="di.AccountDaoImp" autowire="no" scope="singleton" lazy-init="default">
-        <property name="dataSource">
-            <!-- Setter based bean creation, we reference another bean which we created -->
-            <ref bean="dataSource" />
-        </property>
-    </bean>
+    <bean id="accdao" class="di.AccountDaoImp" autowire="byName" scope="singleton" lazy-init="default"></bean>
 </beans>
