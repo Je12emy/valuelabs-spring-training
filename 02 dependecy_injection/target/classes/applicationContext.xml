@@ -3,5 +3,5 @@
 http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
     <bean class="org.apache.commons.dbcp.BasicDataSource"></bean>
     <!-- bean creation -->
-    <bean id="accdao" class="di.AccountDaoImp" autowire="byType" scope="singleton" lazy-init="default"></bean>
+    <bean id="accdao" class="di.AccountDaoImp" autowire="constructor" scope="singleton" lazy-init="default"></bean>
 </beans>
