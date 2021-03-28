@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"></bean>
+    <bean class="org.apache.commons.dbcp.BasicDataSource"></bean>
     <!-- bean creation -->
-    <bean id="accdao" class="di.AccountDaoImp" autowire="byName" scope="singleton" lazy-init="default"></bean>
+    <bean id="accdao" class="di.AccountDaoImp" autowire="byType" scope="singleton" lazy-init="default"></bean>
 </beans>
