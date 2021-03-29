@@ -2,17 +2,22 @@ package di;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class AccountDaoImp {
     // Dependency
+    @Autowired() // Preffer autowired for properties.
     private DataSource dataSource;
 
     public AccountDaoImp() {
     }
 
+    // @Autowired()
     public AccountDaoImp(DataSource ds) {
         this.dataSource = ds;
     }
 
+    // @Autowired()
     public void setDataSource(DataSource ds) {
         this.dataSource = ds;
     }

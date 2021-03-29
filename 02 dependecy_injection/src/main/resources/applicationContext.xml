@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
-    <bean class="org.apache.commons.dbcp.BasicDataSource"></bean>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.2.xsd">
     <!-- bean creation -->
-    <bean id="accdao" class="di.AccountDaoImp" autowire="constructor" scope="singleton" lazy-init="default"></bean>
+    <bean class="org.apache.commons.dbcp.BasicDataSource"></bean>
+    <bean id="accdao" class="di.AccountDaoImp" scope="singleton" lazy-init="default"></bean>
 </beans>
