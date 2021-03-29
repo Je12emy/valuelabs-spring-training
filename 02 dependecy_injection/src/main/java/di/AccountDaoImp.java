@@ -1,12 +1,13 @@
 package di;
 
+import javax.inject.Inject;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class AccountDaoImp {
     // Dependency
-    @Autowired() // Preffer autowired for properties.
+    @Inject // Preffer autowired for properties.
     private DataSource dataSource;
 
     public AccountDaoImp() {
