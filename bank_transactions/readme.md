@@ -44,3 +44,8 @@ This is a list of endpoints for interacting with the transactions controller.
 | Endpoint                          | Description                                             | Return Type |
 | --------------------------------- | ------------------------------------------------------- | ----------- |
 | `/{fromAccountId}/{toAccountId}/` | Withdraw and Deposit $100 from account A into account B | `void`      |
+
+# Notes
+
+- Don't update the Hibernate ORM dependency, else the application won't work!.
+- If you are following Valuelab's training exercise, please check the `pom.xml` since a few dependencies had to be removed in order for this application to work (`Spring.Context`). You may also use Hibernate 5 instead of Hibernate 3!. Also a workaround was needed in the `SpringBootApplication` decorator read more [here](https://stackoverflow.com/questions/42476261/classcastexception-org-springframework-orm-jpa-entitymanagerholder-cannot-be-ca)
