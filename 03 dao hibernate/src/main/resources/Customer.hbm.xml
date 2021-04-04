@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="main.java.dao.model.Customer" table="customer">
+        <id name="cno" column="cno" type="integer">
+            <generator class="assigned" />
+        </id>
+        <property name="cname" column="cname" type="string" length="20" />
+        <property name="address" column="address" type="string" length="100" />
+        <property name="phone" column="phone" type="long" />
+    </class>
+</hibernate-mapping>
