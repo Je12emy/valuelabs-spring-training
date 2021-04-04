@@ -47,6 +47,10 @@ public class TransferMoney implements ITransferMoney {
                 return null;
             }
         });
+    }
+
+    public void salute(int fromAccNo, int toAccNo) {
+        System.out.println("Transfer from account " + fromAccNo + " to account " + toAccNo);
 
     }
 

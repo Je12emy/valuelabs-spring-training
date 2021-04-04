@@ -12,7 +12,7 @@ public class DepositDaoImp {
     private HibernateTemplate hibernateTemplate;
 
     public Deposit read(int id) {
-        return hibernateTemplate.get(Deposit.class, id);
+        return (Deposit) hibernateTemplate.get(Deposit.class, id);
     }
 
     public void update(Deposit w) {

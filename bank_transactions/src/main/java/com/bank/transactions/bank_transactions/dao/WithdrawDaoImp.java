@@ -12,7 +12,7 @@ public class WithdrawDaoImp {
     private HibernateTemplate hibernateTemplate;
 
     public Withdraw read(int id) {
-        return hibernateTemplate.get(Withdraw.class, id);
+        return (Withdraw) hibernateTemplate.get(Withdraw.class, id);
     }
 
     public void update(Withdraw w) {
